@@ -1,0 +1,112 @@
+<<<<<<< HEAD
+@import "../../base";
+
+.login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+
+  &-title {
+    @include font-style($font-weight-medium, $font-size-0, $color-green);
+    margin-bottom: 25px;
+  }
+
+  &-description {
+    @include font-style($font-weight-regular, $font-size-3, $color-black);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &__input {
+      @include font-style($font-weight-medium, $font-size-5, $color-black);
+      @include input-style(
+        $width-input-2,
+        $border-style-1,
+        $border-radius-1,
+        $border-style-2
+      );
+      margin-bottom: 15px;
+    }
+  }
+
+  &-error {
+    @include font-style($font-weight-regular, $font-size-4, $color-black);
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  &-send {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__start {
+      @include font-style($font-weight-medium, $font-size-4, $color-white);
+      @include button-style($border-radius-1, $color-green);
+      margin-bottom: 25px;
+    }
+
+    &__change {
+      @include font-style($font-weight-regular, $font-size-4, $color-black);
+      text-decoration: none;
+
+      &-styled {
+        color: $color-green;
+        border-bottom: 1px solid $color-green;
+      }
+    }
+  }
+
+  &-loading {
+    @include font-style($font-weight-regular, $font-size-4, $color-black);
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .login {
+    margin-top: 14%;
+
+    &-title {
+      font-size: $font-size-1;
+    }
+
+    &-description {
+      font-size: $font-size-4;
+      max-width: 90%;
+    }
+
+    &-form__input {
+      width: $width-input-3;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .login {
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .login {
+    margin-top: 9%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .login {
+    margin-top: 7%;
+  }
+}
+=======
+ 
+>>>>>>> aa17765 (Created Login)

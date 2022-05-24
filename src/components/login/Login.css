@@ -1,0 +1,220 @@
+<<<<<<< HEAD
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5%;
+}
+
+.login-title {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  color: #31C48D;
+  margin-bottom: 25px;
+}
+
+.login-description {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.login-form__input {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+  width: 400px;
+  border: 2px solid #E5E5E5;
+  border-radius: 15px;
+  background: transparent;
+  outline: none;
+  text-overflow: ellipsis;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+}
+
+.login-form__input::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #A3A3A3;
+}
+
+.login-form__input:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #A3A3A3;
+}
+
+.login-form__input::-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #A3A3A3;
+}
+
+.login-form__input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #A3A3A3;
+}
+
+.login-form__input:hover {
+  border: 2px solid #C4C4C4;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.login-form__input:not(:hover) {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.login-error {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.login-send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-send__start {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #FFFFFF;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  background: #31C48D;
+  margin-bottom: 25px;
+}
+
+.login-send__start:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.login-send__start:not(:hover) {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.login-send__start:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.login-send__change {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.login-send__change-styled {
+  color: #31C48D;
+  border-bottom: 1px solid #31C48D;
+}
+
+.login-loading {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  .login {
+    margin-top: 14%;
+  }
+  .login-title {
+    font-size: 40px;
+  }
+  .login-description {
+    font-size: 18px;
+    max-width: 90%;
+  }
+  .login-form__input {
+    width: 300px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .login {
+    margin-top: 10%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .login {
+    margin-top: 9%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .login {
+    margin-top: 7%;
+  }
+}
+/*# sourceMappingURL=Login.css.map */
+=======
+/* No CSS *//*# sourceMappingURL=Login.css.map */
+>>>>>>> aa17765 (Created Login)

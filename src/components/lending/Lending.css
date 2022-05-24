@@ -1,0 +1,109 @@
+.lending {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 8%;
+}
+
+.lending-title {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  color: #31C48D;
+}
+
+.lending-description {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+  max-width: 50%;
+  margin-bottom: 50px;
+}
+
+.lending-description__text-colorized {
+  color: #31C48D;
+}
+
+.lending-login {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #31C48D;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  background: rgba(188, 240, 218, 0.25);
+}
+
+.lending-login:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.lending-login:not(:hover) {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.lending-login:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+@media (max-width: 575px) {
+  .lending {
+    margin-top: 25%;
+  }
+  .lending-title {
+    font-size: 40px;
+  }
+  .lending-description {
+    max-width: 75%;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .lending {
+    margin-top: 17%;
+  }
+  .lending-description {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .lending {
+    margin-top: 15%;
+  }
+  .lending-description {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .lending {
+    margin-top: 11%;
+  }
+}
+/*# sourceMappingURL=Lending.css.map */

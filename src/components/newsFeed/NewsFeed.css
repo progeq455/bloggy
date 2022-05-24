@@ -1,0 +1,120 @@
+.feed {
+  width: 275px;
+  height: 100vh;
+  background: rgba(229, 229, 229, 0.25);
+}
+
+.feed-menu {
+  padding: 25px;
+}
+
+.feed-menu__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feed-menu__user-avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.feed-menu__user-info {
+  margin-left: 15px;
+}
+
+.feed-menu__user-login {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  margin: 0;
+}
+
+.feed-menu__user-email {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #A3A3A3;
+}
+
+.feed-menu__rels {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 35px;
+}
+
+.feed-menu__rels-link {
+  text-decoration: none;
+}
+
+.feed-menu__rels-elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #FFFFFF;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.feed-menu__rels-elem:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0px 4px 15px rgba(229, 229, 229, 0.25);
+          box-shadow: 0px 4px 15px rgba(229, 229, 229, 0.25);
+}
+
+.feed-menu__rels-elem:not(:hover) {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.feed-menu__rels-elem:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.feed-menu__rels-title {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #C4C4C4;
+}
+
+.feed-menu__rels-img {
+  width: 21px;
+  height: 21px;
+}
+/*# sourceMappingURL=NewsFeed.css.map */
