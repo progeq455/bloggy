@@ -1,13 +1,18 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { feedAPI } from "../services/feedService";
 import userReducer from "./reducers/userSlice";
 
 const rootReducer = combineReducers({
-  userReducer
+  userReducer,
+  [feedAPI.reducerPath]: feedAPI.reducer
 });
 
 export const setupStore = () => {
   return configureStore({
     reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware()
+        .concat(feedAPI.middleware)
   })
 };
 
