@@ -1,0 +1,132 @@
+.menu-container {
+  float: left;
+}
+
+.menu {
+  width: 250px;
+  height: 100vh;
+  padding: 25px;
+  background: rgba(229, 229, 229, 0.25);
+}
+
+.menu-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu-user__avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.menu-user__info {
+  margin-left: 15px;
+}
+
+.menu-user__info-login {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  margin: 0;
+}
+
+.menu-user__info-email {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #A3A3A3;
+}
+
+.menu-links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 35px;
+}
+
+.menu-links__link {
+  text-decoration: none;
+}
+
+.menu-links__elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #FFFFFF;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: 2px solid rgba(229, 229, 229, 0.25);
+}
+
+.menu-links__elem:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-box-shadow: 0px 4px 15px rgba(229, 229, 229, 0.25);
+          box-shadow: 0px 4px 15px rgba(229, 229, 229, 0.25);
+}
+
+.menu-links__elem:not(:hover) {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.menu-links__elem:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.menu-links__elem-title {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #C4C4C4;
+}
+
+.menu-links__elem-img {
+  width: 21px;
+  height: 21px;
+}
+
+.active {
+  background: rgba(188, 240, 218, 0.25);
+  border: 2px solid #31C48D;
+}
+
+.active p {
+  font-weight: 500;
+  color: #31C48D;
+}
+/*# sourceMappingURL=Menu.css.map */
