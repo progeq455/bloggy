@@ -104,4 +104,110 @@
     @include button-style($border-radius-1, $color-green);
     @include font-style($font-weight-regular, $font-size-5, $color-white);
   }
+
+  &-artccontainer {
+    overflow: scroll;
+    height: 95vh;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &-articles {
+    list-style-type: none;
+    padding: 0;
+    padding-bottom: 15vh;
+    display: flex;
+    flex-direction: column;
+
+    &__element {
+      padding: 25px;
+      background: $color-white-lighter;
+      border: 1px solid $color-gray-whiter;
+      border-radius: $border-radius-1;
+      margin-bottom: 25px;
+
+      &-img {
+        width: 40px;
+        height: 40px;
+        border-radius: $border-radius-3;
+      }
+
+      &-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: $border-radius-3;
+        @include font-style($font-weight-medium, $font-size-5, $color-white);
+        background: #ffb266;
+      }
+
+      &-link {
+        text-decoration: none;
+
+        & p:hover {
+          transition: 0.3s;
+          color: $color-green;
+        }
+
+        & p:not(:hover) {
+          transition: 0.3s;
+        }
+
+        & span:hover {
+          transition: 0.3s;
+          color: $color-green;
+        }
+
+        & span:not(:hover) {
+          transition: 0.3s;
+        }
+      }
+
+      &-main {
+        display: flex;
+        align-items: center;
+      }
+
+      &-text {
+        margin-left: 15px;
+      }
+
+      &-caption {
+        @include font-style($font-weight-medium, $font-size-4, $color-black);
+        margin: 0;
+        margin-bottom: 3px;
+      }
+
+      &-title {
+        @include font-style(
+          $font-weight-regular,
+          $font-size-5,
+          $color-dark-gray
+        );
+      }
+
+      &-content {
+        @include font-style($font-weight-regular, $font-size-5, $color-black);
+        margin-top: 18px;
+
+        &:hover {
+          transition: 0.3s;
+          color: $color-green;
+        }
+
+        &:not(:hover) {
+          transition: 0.3s;
+        }
+      }
+
+      &-date {
+        @include font-style($font-weight-regular, $font-size-6, $color-gray);
+        margin-bottom: 2px;
+      }
+    }
+  }
 }

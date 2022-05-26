@@ -16,4 +16,9 @@ body {
   color: #000000;
   margin: 25px;
 }
+
+main {
+  height: 100vh;
+  overflow: hidden;
+}
 /*# sourceMappingURL=App.css.map */
