@@ -5,14 +5,14 @@
   width: 50%;
   height: 100vh;
   border-right: 1px solid $color-gray-whiter;
+  padding-top: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
 
   &-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
 
     &__caption {
       @include font-style($font-weight-medium, $font-size-2, $color-black);
@@ -31,5 +31,77 @@
       background-size: 20px;
       background-position: $width-input-4 + 25px;
     }
+  }
+
+  &-subscontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-subscribes {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+
+    &__blog {
+      padding-right: 20px;
+      width: 55px;
+      height: 55px;
+
+      &-img {
+        width: 55px;
+        height: 55px;
+        border-radius: $border-radius-5;
+        border: $border-style-1;
+
+        &:hover {
+          transition: 0.3s;
+          transform: translateY(-3px);
+          border: $border-style-3;
+          cursor: pointer;
+        }
+
+        &:not(:hover) {
+          transition: 0.3s;
+        }
+
+        &:active {
+          transform: scale(0.8);
+        }
+      }
+
+      &-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 55px;
+        border-radius: $border-radius-5;
+        border: $border-style-1;
+        @include font-style($font-weight-medium, $font-size-5, $color-white);
+        background: #ffb266;
+
+        &:hover {
+          transition: 0.3s;
+          transform: translateY(-3px);
+          border: $border-style-3;
+          cursor: pointer;
+        }
+
+        &:not(:hover) {
+          transition: 0.3s;
+        }
+
+        &:active {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+
+  &-subschange {
+    @include button-style($border-radius-1, $color-green);
+    @include font-style($font-weight-regular, $font-size-5, $color-white);
   }
 }

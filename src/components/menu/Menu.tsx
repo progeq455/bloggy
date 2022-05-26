@@ -28,7 +28,7 @@ const Menu: FC = () => {
     avatar = user.avatar;
 
     currentAvatar = generateAvatar(avatar);
-  }
+  } 
 
   const [currentLink, setCurrentLink] = useState<number>();
 
