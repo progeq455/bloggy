@@ -1,9 +1,9 @@
 import React, { FC, useState } from "react";
 import { Link } from "react-router-dom";
-import { registerUser } from "../../store/reducers/userActions";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/redux";
-import "./Register.css";
+import { registerUser } from "../../store/reducers/userActions";
 import { clearErrorRegister } from "../../store/reducers/userSlice";
+import "./Register.css";
 
 const Register: FC = () => {
   const [login, setLogin] = useState<string>("");

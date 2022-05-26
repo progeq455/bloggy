@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react";
+import { Link } from "react-router-dom";
 import { useAppSelector } from "../../store/hooks/redux";
 import { generateAvatar } from "../utils/avatarGenerate";
 import search from "../../icons/search.png";
@@ -12,7 +13,6 @@ import blogGreen from "../../icons/blogGreen.png";
 import profile from "../../icons/profile.png";
 import profileGreen from "../../icons/profileGreen.png";
 import "./Menu.css";
-import { Link } from "react-router-dom";
 
 const Menu: FC = () => {
   const { user } = useAppSelector((state) => state.userReducer);
@@ -28,7 +28,7 @@ const Menu: FC = () => {
     avatar = user.avatar;
 
     currentAvatar = generateAvatar(avatar);
-  } 
+  }
 
   const [currentLink, setCurrentLink] = useState<number>();
 

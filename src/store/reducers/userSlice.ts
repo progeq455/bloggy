@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IUser } from "../types/User";
 import { authUser, loginUser, registerUser } from "./userActions";
+import { IUser } from "../types/User";
 
 interface AuthState {
     user: IUser | {};

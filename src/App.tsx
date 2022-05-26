@@ -5,14 +5,14 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import "./App.css";
+import { useAppDispatch, useAppSelector } from "./store/hooks/redux";
+import { authUser } from "./store/reducers/userActions";
 import Lending from "./components/lending/Lending";
 import Login from "./components/login/Login";
 import Menu from "./components/menu/Menu";
 import NewsFeed from "./components/newsFeed/NewsFeed";
 import Register from "./components/register/Register";
-import { useAppDispatch, useAppSelector } from "./store/hooks/redux";
-import { authUser } from "./store/reducers/userActions";
+import "./App.css";
 
 function App() {
   const { auth, isLoading } = useAppSelector((state) => state.userReducer);

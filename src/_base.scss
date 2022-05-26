@@ -1,27 +1,25 @@
-$color-dark-green: #0E9F6E;
-$color-green: #31C48D;
-$color-light-green: #84E1BC;
-$color-lighter-green: #BCF0DA;
+$color-dark-green: #0e9f6e;
+$color-green: #31c48d;
+$color-light-green: #84e1bc;
+$color-lighter-green: #bcf0da;
 $color-light-green-opacity: rgba(188, 240, 218, 0.25);
-$color-green-gradient: linear-gradient(97.86deg, #31C48D 2.43%, #07EEA0 73.24%);
-$color-green-gradient-2: linear-gradient(180deg, #31C48D 0%, #84E1BC 100%);
-$color-white: #FFFFFF;
-$color-white-light: #FCFCFC;
+$color-green-gradient: linear-gradient(97.86deg, #31c48d 2.43%, #07eea0 73.24%);
+$color-green-gradient-2: linear-gradient(180deg, #31c48d 0%, #84e1bc 100%);
+$color-white: #ffffff;
+$color-white-light: #fcfcfc;
 $color-white-lighter: #fcfcfc59;
 $color-black: #000000;
-$color-gray: #C4C4C4;
+$color-gray: #c4c4c4;
 $color-light-gray: rgba(229, 229, 229, 0.1);
 $color-lighter-gray: rgba(229, 229, 229, 0.25);
-$color-dark-gray: #A3A3A3;
-$color-gray-whiter: #E5E5E5;
-
+$color-dark-gray: #a3a3a3;
+$color-gray-whiter: #e5e5e5;
 
 $font-weight-light: 200;
 $font-weight-regular: 400;
 $font-weight-regular-plus: 500;
 $font-weight-medium: 600;
 $font-weight-bold: 800;
-
 
 $font-size-0: 54px;
 $font-size-1: 40px;
@@ -32,18 +30,16 @@ $font-size-5: 16px;
 $font-size-6: 14px;
 $font-size-7: 12px;
 
-
 @mixin font-style($weight, $size, $color) {
-    font: {
-        family: Roboto Flex, sans-serif;
-        style: normal;
-        weight: $weight;
-        size: $size;
-    }
+  font: {
+    family: Roboto Flex, sans-serif;
+    style: normal;
+    weight: $weight;
+    size: $size;
+  }
 
-    color: $color;
+  color: $color;
 }
-
 
 $border-radius-1: 15px;
 $border-radius-2: 25px;
@@ -51,30 +47,28 @@ $border-radius-3: 50px;
 $border-radius-4: 75px;
 $border-radius-5: 100px;
 
-
 @mixin button-style($radius, $bgcolor) {
-    padding: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
-    border: none;
-    cursor: pointer;
-    border-radius: $radius;
-    background: $bgcolor;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: $radius;
+  background: $bgcolor;
 
-    &:hover {
-        transition: 0.3s;
-        transform: translateY(-3px);
-    }
+  &:hover {
+    transition: 0.3s;
+    transform: translateY(-3px);
+  }
 
-    &:not(:hover) {
-        transition: 0.3s;
-    }
+  &:not(:hover) {
+    transition: 0.3s;
+  }
 
-    &:active {
-        transform: scale(0.8);
-    }
+  &:active {
+    transform: scale(0.8);
+  }
 }
-
 
 $width-input-1: 500px;
 $width-input-2: 400px;
@@ -82,35 +76,33 @@ $width-input-3: 300px;
 $width-input-4: 200px;
 $width-input-5: 100px;
 
-
 $border-style-1: 2px solid $color-gray-whiter;
 $border-style-2: 2px solid $color-gray;
 $border-style-3: 2px solid $color-light-green;
 
-
 @mixin input-style($width, $border, $border-radius, $hover-border) {
-    width: $width;
-    border: $border;
-    border-radius: $border-radius;
-    background: transparent;
-    outline: none;
-    text-overflow: ellipsis;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+  width: $width;
+  border: $border;
+  border-radius: $border-radius;
+  background: transparent;
+  outline: none;
+  text-overflow: ellipsis;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 
-    &::placeholder {
-        font-size: $font-size-5;
-        font-weight: $font-weight-regular;
-        color: $color-dark-gray;
-    }
+  &::placeholder {
+    font-size: $font-size-5;
+    font-weight: $font-weight-regular;
+    color: $color-dark-gray;
+  }
 
-    &:hover {
-        border: $hover-border;
-        transition: 0.3s;
-    }
+  &:hover {
+    border: $hover-border;
+    transition: 0.3s;
+  }
 
-    &:not(:hover) {
-        transition: 0.3s;
-    }
+  &:not(:hover) {
+    transition: 0.3s;
+  }
 }

@@ -14,8 +14,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu-user__avatar {
@@ -23,11 +23,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 50px;
   height: 50px;
   border-radius: 100px;
@@ -35,7 +35,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .menu-user__info {
@@ -56,7 +56,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  color: #A3A3A3;
+  color: #a3a3a3;
 }
 
 .menu-links {
@@ -74,12 +74,12 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #FFFFFF;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #ffffff;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 15px;
@@ -92,9 +92,9 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  transform: translateY(-3px);
   -webkit-box-shadow: 0px 4px 15px rgba(229, 229, 229, 0.25);
-          box-shadow: 0px 4px 15px rgba(229, 229, 229, 0.25);
+  box-shadow: 0px 4px 15px rgba(229, 229, 229, 0.25);
 }
 
 .menu-links__elem:not(:hover) {
@@ -104,7 +104,7 @@
 
 .menu-links__elem:active {
   -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .menu-links__elem-title {
@@ -112,7 +112,7 @@
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  color: #C4C4C4;
+  color: #c4c4c4;
 }
 
 .menu-links__elem-img {
@@ -122,11 +122,11 @@
 
 .active {
   background: rgba(188, 240, 218, 0.25);
-  border: 2px solid #31C48D;
+  border: 2px solid #31c48d;
 }
 
 .active p {
   font-weight: 500;
-  color: #31C48D;
+  color: #31c48d;
 }
 /*# sourceMappingURL=Menu.css.map */

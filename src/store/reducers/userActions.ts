@@ -1,7 +1,6 @@
-import { IUserToLogin, IUserToRegister } from './../types/User';
-import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { IUserVerify } from "../types/User";
+import axios from "axios";
+import { IUserToLogin, IUserToRegister, IUserVerify } from './../types/User';
 import { API_URL } from "../../config";
 
 export const authUser = createAsyncThunk(

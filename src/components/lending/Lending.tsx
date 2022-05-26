@@ -11,11 +11,7 @@ const Lending: FC = () => {
         <span className="lending-description__text-colorized">платформа </span>
         для чтения и ведения собственных
         <span className="lending-description__text-colorized"> блогов </span>
-        на темы
-        <span className="lending-description__text-colorized">
-          IT-сообщества
-        </span>
-        , веб-технологиях, разработки.
+        на темы IT-сообщества, веб-технологиях, разработки.
         <span className="lending-description__text-colorized">Читайте </span>
         статьи и блоги других людей,
         <span className="lending-description__text-colorized">
