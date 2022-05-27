@@ -17,20 +17,6 @@
     &__caption {
       @include font-style($font-weight-medium, $font-size-2, $color-black);
     }
-
-    &__search {
-      @include input-style(
-        $width-input-4,
-        $border-style-1,
-        $border-radius-3,
-        $border-style-2
-      );
-      @include font-style($font-weight-regular, $font-size-5, $color-black);
-      padding-right: 50px;
-      background: url("../../icons/search.png") no-repeat scroll 7px 7px;
-      background-size: 20px;
-      background-position: $width-input-4 + 25px;
-    }
   }
 
   &-subscontainer {
@@ -55,6 +41,10 @@
     list-style-type: none;
     padding: 0;
     display: flex;
+
+    &__loading {
+      @include font-style($font-weight-regular, $font-size-5, $color-black);
+    }
 
     &__blog {
       padding-right: 20px;
@@ -129,8 +119,51 @@
   &-articles {
     list-style-type: none;
     padding: 0;
+    padding-top: 25px;
     padding-bottom: 15vh;
     display: flex;
     flex-direction: column;
+
+    &__loading {
+      @include font-style($font-weight-regular, $font-size-5, $color-black);
+    }
+  }
+}
+
+@media (max-width: 575px) {
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .feed {
+    border-right: none;
+
+    &-subscribes {
+      max-width: 100%;
+      height: 65px;
+      overflow-x: scroll;
+    }
+
+    &-subschange {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .feed {
+    border-right: none;
+
+    &-subscribes {
+      max-width: 100%;
+      height: 65px;
+      overflow-x: scroll;
+    }
+
+    &-subschange {
+      display: none;
+    }
   }
 }

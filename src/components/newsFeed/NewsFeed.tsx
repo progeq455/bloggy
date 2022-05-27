@@ -6,26 +6,21 @@ import ArticleItem from "../article/articleItem/ArticleItem";
 import "./NewsFeed.css";
 
 const NewsFeed: FC = () => {
-  const { data: blogs } = feedAPI.useFetchBlogsSubscribesShortlyQuery(
-    localStorage.token
-  );
-
-  const { data: articles } = feedAPI.useFetchArticlesBlogsSubscribesQuery(
-    localStorage.token
-  );
+  const { data: blogs, isFetching } =
+    feedAPI.useFetchBlogsSubscribesShortlyQuery(localStorage.token);
+  const { data: articles, isLoading } =
+    feedAPI.useFetchArticlesBlogsSubscribesQuery(localStorage.token);
 
   return (
     <section className="feed">
       <div className="feed-header">
         <p className="feed-header__caption">Лента</p>
-        <input
-          type="text"
-          placeholder="Искать в Bloggy"
-          className="feed-header__search"
-        />
       </div>
       <div className="feed-subscontainer">
         <ul className="feed-subscribes">
+          {isFetching && (
+            <p className="feed-subscribes__loading">Загрузка...</p>
+          )}
           {blogs &&
             blogs.map((blog) => (
               <Link
@@ -54,6 +49,7 @@ const NewsFeed: FC = () => {
       </div>
       <section className="feed-artccontainer">
         <ul className="feed-articles">
+          {isLoading && <p className="feed-articles__loading">Загрузка...</p>}
           {articles &&
             articles.map((article) => <ArticleItem article={article} />)}
         </ul>

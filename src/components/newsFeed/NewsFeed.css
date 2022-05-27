@@ -28,62 +28,6 @@
   color: #000000;
 }
 
-.feed-header__search {
-  width: 200px;
-  border: 2px solid #e5e5e5;
-  border-radius: 50px;
-  background: transparent;
-  outline: none;
-  text-overflow: ellipsis;
-  padding: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-family: Roboto Flex, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  color: #000000;
-  padding-right: 50px;
-  background: url("../../icons/search.png") no-repeat scroll 7px 7px;
-  background-size: 20px;
-  background-position: 225px;
-}
-
-.feed-header__search::-webkit-input-placeholder {
-  font-size: 16px;
-  font-weight: 400;
-  color: #a3a3a3;
-}
-
-.feed-header__search:-ms-input-placeholder {
-  font-size: 16px;
-  font-weight: 400;
-  color: #a3a3a3;
-}
-
-.feed-header__search::-ms-input-placeholder {
-  font-size: 16px;
-  font-weight: 400;
-  color: #a3a3a3;
-}
-
-.feed-header__search::placeholder {
-  font-size: 16px;
-  font-weight: 400;
-  color: #a3a3a3;
-}
-
-.feed-header__search:hover {
-  border: 2px solid #c4c4c4;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.feed-header__search:not(:hover) {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
 .feed-subscontainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,6 +59,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.feed-subscribes__loading {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
 }
 
 .feed-subscribes__blog {
@@ -234,6 +186,7 @@
 .feed-articles {
   list-style-type: none;
   padding: 0;
+  padding-top: 25px;
   padding-bottom: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,5 +195,41 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.feed-articles__loading {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .feed {
+    border-right: none;
+  }
+  .feed-subscribes {
+    max-width: 100%;
+    height: 65px;
+    overflow-x: scroll;
+  }
+  .feed-subschange {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .feed {
+    border-right: none;
+  }
+  .feed-subscribes {
+    max-width: 100%;
+    height: 65px;
+    overflow-x: scroll;
+  }
+  .feed-subschange {
+    display: none;
+  }
 }
 /*# sourceMappingURL=NewsFeed.css.map */
