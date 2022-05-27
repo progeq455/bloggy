@@ -48,9 +48,9 @@ const ArticleItem: FC<IArticleItemProps> = ({ article }) => {
             to={`/blogs/${article.blog_id}`}
             className="feed-articles__element-link"
           >
-            <span className="feed-articles__element-title">
+            <p className="feed-articles__element-title">
               {article.blog_caption}
-            </span>
+            </p>
           </Link>
         </div>
       </div>

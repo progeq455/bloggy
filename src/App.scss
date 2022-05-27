@@ -16,3 +16,17 @@ main {
   height: 100vh;
   overflow: hidden;
 }
+
+@media (max-width: 575px) {
+  main {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  main {
+    display: flex;
+    justify-content: center;
+  }
+}

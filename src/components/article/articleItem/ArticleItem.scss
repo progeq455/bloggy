@@ -53,16 +53,24 @@
 
   &-text {
     margin-left: 15px;
+    max-width: 70%;
   }
 
   &-caption {
     @include font-style($font-weight-medium, $font-size-4, $color-black);
     margin: 0;
     margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &-title {
     @include font-style($font-weight-regular, $font-size-5, $color-dark-gray);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
   }
 
   &-content {

@@ -46,6 +46,10 @@
       @include font-style($font-weight-regular, $font-size-5, $color-black);
     }
 
+    &__none {
+      @include font-style($font-weight-regular, $font-size-4, $color-black);
+    }
+
     &__blog {
       padding-right: 20px;
       width: 55px;
@@ -55,7 +59,7 @@
         width: 55px;
         height: 55px;
         border-radius: $border-radius-5;
-        border: $border-style-1;
+        border: $border-style-4;
 
         &:hover {
           transition: 0.3s;
@@ -80,7 +84,7 @@
         width: 55px;
         height: 55px;
         border-radius: $border-radius-5;
-        border: $border-style-1;
+        border: $border-style-4;
         @include font-style($font-weight-medium, $font-size-5, $color-white);
         background: #ffb266;
 
@@ -103,8 +107,8 @@
   }
 
   &-subschange {
-    @include button-style($border-radius-1, $color-green);
-    @include font-style($font-weight-regular, $font-size-5, $color-white);
+    @include button-style($border-radius-3, $color-green-gradient);
+    @include font-style($font-weight-medium, $font-size-5, $color-white);
   }
 
   &-artccontainer {
@@ -119,21 +123,61 @@
   &-articles {
     list-style-type: none;
     padding: 0;
-    padding-top: 25px;
-    padding-bottom: 15vh;
+    padding-top: 15px;
+    padding-bottom: 17vh;
     display: flex;
     flex-direction: column;
 
     &__loading {
       @include font-style($font-weight-regular, $font-size-5, $color-black);
     }
+
+    &__none {
+      @include font-style($font-weight-regular, $font-size-4, $color-black);
+    }
   }
 }
 
 @media (max-width: 575px) {
+  .feed {
+    width: 80%;
+    border-right: none;
+
+    &-subscribes {
+      max-width: 100%;
+      height: 65px;
+      overflow-x: scroll;
+    }
+
+    &-subschange {
+      display: none;
+    }
+
+    &-articles {
+      padding-top: 10px;
+    }
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
+  .feed {
+    width: 80%;
+    border-right: none;
+
+    &-subscribes {
+      max-width: 100%;
+      height: 65px;
+      overflow-x: scroll;
+    }
+
+    &-subschange {
+      display: none;
+    }
+
+    &-articles {
+      padding-top: 10px;
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -148,6 +192,10 @@
 
     &-subschange {
       display: none;
+    }
+
+    &-articles {
+      padding-top: 15px;
     }
   }
 }

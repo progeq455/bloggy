@@ -129,4 +129,16 @@
   font-weight: 500;
   color: #31c48d;
 }
+
+@media (max-width: 575px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
 /*# sourceMappingURL=Menu.css.map */

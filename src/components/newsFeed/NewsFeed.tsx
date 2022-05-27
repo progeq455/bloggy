@@ -18,30 +18,34 @@ const NewsFeed: FC = () => {
       </div>
       <div className="feed-subscontainer">
         <ul className="feed-subscribes">
-          {isFetching && (
+          {isFetching === false ? (
+            blogs && blogs.length !== 0 ? (
+              blogs.map((blog) => (
+                <Link
+                  to={`/blogs/${blog.blog_id}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  <li className="feed-subscribes__blog" key={blog.blog_id}>
+                    {blog.blog_avatar ? (
+                      <img
+                        src={`${AVATAR_BLOG_STATIC_URL + blog.blog_avatar}`}
+                        alt={blog.blog_caption}
+                        className="feed-subscribes__blog-img"
+                      />
+                    ) : (
+                      <div className="feed-subscribes__blog-avatar">
+                        {blog.blog_caption[0]}
+                      </div>
+                    )}
+                  </li>
+                </Link>
+              ))
+            ) : (
+              <p className="feed-subscribes__none">У вас еще нету подписок!</p>
+            )
+          ) : (
             <p className="feed-subscribes__loading">Загрузка...</p>
           )}
-          {blogs &&
-            blogs.map((blog) => (
-              <Link
-                to={`/blogs/${blog.blog_id}`}
-                style={{ textDecoration: "none" }}
-              >
-                <li className="feed-subscribes__blog" key={blog.blog_id}>
-                  {blog.blog_avatar ? (
-                    <img
-                      src={`${AVATAR_BLOG_STATIC_URL + blog.blog_avatar}`}
-                      alt={blog.blog_caption}
-                      className="feed-subscribes__blog-img"
-                    />
-                  ) : (
-                    <div className="feed-subscribes__blog-avatar">
-                      {blog.blog_caption[0]}
-                    </div>
-                  )}
-                </li>
-              </Link>
-            ))}
         </ul>
         <Link to="/subscribes">
           <button className="feed-subschange">Подписки</button>
@@ -49,9 +53,15 @@ const NewsFeed: FC = () => {
       </div>
       <section className="feed-artccontainer">
         <ul className="feed-articles">
-          {isLoading && <p className="feed-articles__loading">Загрузка...</p>}
-          {articles &&
-            articles.map((article) => <ArticleItem article={article} />)}
+          {isLoading === false ? (
+            articles && articles.length !== 0 ? (
+              articles.map((article) => <ArticleItem article={article} />)
+            ) : (
+              <p className="feed-articles__none">В ленте пока ничего нет :(</p>
+            )
+          ) : (
+            <p className="feed-articles__loading">Загрузка...</p>
+          )}
         </ul>
       </section>
     </section>

@@ -70,6 +70,7 @@
 
 .feed-articles__element-text {
   margin-left: 15px;
+  max-width: 70%;
 }
 
 .feed-articles__element-caption {
@@ -80,6 +81,9 @@
   color: #000000;
   margin: 0;
   margin-bottom: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .feed-articles__element-title {
@@ -88,6 +92,10 @@
   font-weight: 400;
   font-size: 16px;
   color: #a3a3a3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
 }
 
 .feed-articles__element-content {
