@@ -124,12 +124,6 @@
         transform: scale(0.9);
       }
     }
-
-    &__padding {
-      display: none;
-      width: 100%;
-      height: 50px;
-    }
   }
 }
 
@@ -157,11 +151,7 @@
       padding-bottom: 25px;
 
       &__link-img {
-        width: 32px;
-      }
-
-      &__padding {
-        display: block;
+        width: 28px;
       }
     }
   }
@@ -177,10 +167,6 @@
 
     &-mobile {
       display: flex;
-
-      &__padding {
-        display: block;
-      }
     }
   }
 }

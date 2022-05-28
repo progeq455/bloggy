@@ -161,12 +161,6 @@
           transform: scale(0.9);
 }
 
-.menu-mobile__padding {
-  display: none;
-  width: 100%;
-  height: 50px;
-}
-
 .active {
   background: rgba(188, 240, 218, 0.25);
   border: 2px solid #31c48d;
@@ -192,10 +186,7 @@
     padding-bottom: 25px;
   }
   .menu-mobile__link-img {
-    width: 32px;
-  }
-  .menu-mobile__padding {
-    display: block;
+    width: 28px;
   }
 }
 
@@ -210,9 +201,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .menu-mobile__padding {
-    display: block;
   }
 }
 /*# sourceMappingURL=Menu.css.map */
