@@ -223,7 +223,7 @@
 
 @media (max-width: 575px) {
   .feed {
-    width: 80%;
+    width: 85%;
     border-right: none;
   }
   .feed-subscribes {
@@ -241,7 +241,7 @@
 
 @media (min-width: 576px) and (max-width: 767px) {
   .feed {
-    width: 80%;
+    width: 85%;
     border-right: none;
   }
   .feed-subscribes {

@@ -142,8 +142,64 @@ const Menu: FC = () => {
           </Link>
         </ul>
       </div>
-
-      
+      <section className="menu-mobile">
+        <Link
+          to="/newsFeed"
+          className="menu-mobile__link"
+          onClick={() => setCurrentLink(1)}
+        >
+          <img
+            src={currentLink === 1 ? lentaGreen : lenta}
+            alt="Лента"
+            className="menu-mobile__link-img"
+          />
+        </Link>
+        <Link
+          to="/search"
+          className="menu-mobile__link"
+          onClick={() => setCurrentLink(2)}
+        >
+          <img
+            src={currentLink === 2 ? searchGreen : search}
+            alt="Поиск"
+            className="menu-mobile__link-img"
+          />
+        </Link>
+        <Link
+          to="/subscribes"
+          className="menu-mobile__link"
+          onClick={() => setCurrentLink(3)}
+        >
+          <img
+            src={currentLink === 3 ? notificationGreen : notification}
+            alt="Подписки"
+            className="menu-mobile__link-img"
+          />
+        </Link>
+        <Link
+          to="/myBlogs"
+          className="menu-mobile__link"
+          onClick={() => setCurrentLink(4)}
+        >
+          <img
+            src={currentLink === 4 ? blogGreen : blog}
+            alt="Мои блоги"
+            className="menu-mobile__link-img"
+          />
+        </Link>
+        <Link
+          to="/profile"
+          className="menu-mobile__link"
+          onClick={() => setCurrentLink(5)}
+        >
+          <img
+            src={currentLink === 5 ? profileGreen : profile}
+            alt="Профиль"
+            className="menu-mobile__link-img"
+          />
+        </Link>
+      </section>
+      <div className="menu-mobile__padding"></div>
     </section>
   );
 };
