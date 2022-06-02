@@ -18,7 +18,7 @@ export const authUser = createAsyncThunk(
             localStorage.removeItem("token");
             return thunkAPI.rejectWithValue(e.response.data.message);
         }
-    }
+    } 
 )
 
 export const loginUser = createAsyncThunk(

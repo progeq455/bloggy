@@ -61,8 +61,13 @@
   display: -ms-flexbox;
   display: flex;
   max-width: 75%;
-  height: 70px;
+  height: 80px;
   overflow-x: scroll;
+}
+
+.feed-subscribes::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .feed-subscribes__loading {
