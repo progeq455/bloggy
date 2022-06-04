@@ -56,9 +56,8 @@ const Menu: FC = () => {
             onClick={() => setCurrentLink(1)}
           >
             <li
-              className={`menu-links__elem ${
-                currentLink === 1 ? "active" : ""
-              }`}
+              className={`menu-links__elem ${currentLink === 1 ? "active" : ""
+                }`}
             >
               <p className="menu-links__elem-title">Поиск</p>
               <img
@@ -74,9 +73,8 @@ const Menu: FC = () => {
             onClick={() => setCurrentLink(2)}
           >
             <li
-              className={`menu-links__elem ${
-                currentLink === 2 ? "active" : ""
-              }`}
+              className={`menu-links__elem ${currentLink === 2 ? "active" : ""
+                }`}
             >
               <p className="menu-links__elem-title">Лента</p>
               <img
@@ -92,9 +90,8 @@ const Menu: FC = () => {
             onClick={() => setCurrentLink(3)}
           >
             <li
-              className={`menu-links__elem ${
-                currentLink === 3 ? "active" : ""
-              }`}
+              className={`menu-links__elem ${currentLink === 3 ? "active" : ""
+                }`}
             >
               <p className="menu-links__elem-title">Подписки</p>
               <img
@@ -110,9 +107,8 @@ const Menu: FC = () => {
             onClick={() => setCurrentLink(4)}
           >
             <li
-              className={`menu-links__elem ${
-                currentLink === 4 ? "active" : ""
-              }`}
+              className={`menu-links__elem ${currentLink === 4 ? "active" : ""
+                }`}
             >
               <p className="menu-links__elem-title">Мои блоги</p>
               <img
@@ -128,9 +124,8 @@ const Menu: FC = () => {
             onClick={() => setCurrentLink(5)}
           >
             <li
-              className={`menu-links__elem ${
-                currentLink === 5 ? "active" : ""
-              }`}
+              className={`menu-links__elem ${currentLink === 5 ? "active" : ""
+                }`}
             >
               <p className="menu-links__elem-title">Профиль</p>
               <img

@@ -102,8 +102,6 @@
 .feed-subscribes__blog-img:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
   border: 2px solid #84e1bc;
   cursor: pointer;
 }
@@ -143,8 +141,6 @@
 .feed-subscribes__blog-avatar:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
   border: 2px solid #84e1bc;
   cursor: pointer;
 }
@@ -193,7 +189,7 @@
 
 .feed-artccontainer {
   overflow: scroll;
-  height: 95vh;
+  height: 80vh;
 }
 
 .feed-artccontainer::-webkit-scrollbar {
@@ -272,9 +268,6 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .feed {
-    border-right: none;
-  }
   .feed-subscribes {
     max-width: 100%;
     height: 65px;
@@ -290,9 +283,6 @@
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .feed {
-    border-right: none;
-  }
   .feed-subscribes {
     max-width: 100%;
     height: 65px;

@@ -1,1 +1,188 @@
- 
+@import "../../base";
+
+.blog {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  border-right: 1px solid $color-gray-whiter;
+
+  &-header {
+    margin-bottom: 40px;
+
+    &__banner {
+      width: 100%;
+      height: 100px;
+
+      &-grafic {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+        background: $color-green-gradient-3;
+      }
+
+      &-text {
+        @include font-style($font-weight-light, $font-size-5, $color-white);
+        max-width: 70%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &__avatar {
+      margin-bottom: -20px;
+
+      &-grafic {
+        margin: 25px;
+        margin-top: -20px;
+        position: relative;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: $border-radius-4;
+        border: $border-style-4;
+        @include font-style($font-weight-medium, $font-size-5, $color-white);
+        background: #ffb266;
+      }
+
+      &-img {
+        margin: 25px;
+        margin-top: -20px;
+        position: relative;
+        width: 55px;
+        height: 55px;
+        border-radius: $border-radius-4;
+        border: $border-style-4;
+      }
+    }
+
+    &__info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__about {
+      padding-left: 25px;
+      padding-right: 25px;
+
+      &-caption {
+        @include font-style($font-weight-medium, $font-size-3, $color-black);
+        margin-bottom: 8px;
+      }
+
+      &-subscribes {
+        @include font-style(
+          $font-weight-regular,
+          $font-size-6,
+          $color-dark-gray
+        );
+        margin-left: 15px;
+      }
+
+      &-author {
+        @include font-style(
+          $font-weight-regular,
+          $font-size-6,
+          $color-dark-gray
+        );
+      }
+    }
+
+    &__subscribe {
+      @include button-style($border-radius-3, $color-green-gradient);
+      @include font-style($font-weight-regular, $font-size-5, $color-white);
+      margin-right: 25px;
+    }
+
+    &__description {
+      margin-top: 25px;
+      margin-left: 25px;
+      margin-right: 25px;
+      @include font-style($font-weight-regular, $font-size-6, $color-black);
+      display: -webkit-box;
+      -webkit-line-clamp: 7;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+
+  &-loading {
+    @include font-style($font-weight-regular, $font-size-5, $color-black);
+  }
+
+  &-data {
+    @include font-style($font-weight-medium, $font-size-3, $color-black);
+    margin-left: 25px;
+  }
+
+  &-list {
+    overflow: scroll;
+    height: 40vh;
+    list-style-type: none;
+    padding: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 15px;
+    padding-bottom: 17vh;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    &__none {
+      @include font-style($font-weight-regular, $font-size-5, $color-black);
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .blog {
+    width: 100%;
+    border-right: none;
+
+    &-header {
+      &__about {
+        &-caption {
+          display: flex;
+          flex-direction: column;
+        }
+
+        &-subscribes {
+          margin-top: 8px;
+          margin-left: 0;
+        }
+      }
+
+      &__subscribe {
+        font-size: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
+        white-space: nowrap;
+      }
+
+      &__description {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .blog {
+    width: 85%;
+    border-right: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog {
+    width: 60%;
+  }
+}

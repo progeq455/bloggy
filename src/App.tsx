@@ -37,7 +37,6 @@ function App() {
           </Routes>
         ) : (
           <main>
-            <Link to="/blogs/1">blog 1</Link>
             <Menu />
             <Routes>
               <Route path="/newsFeed" element={<NewsFeed />} />
