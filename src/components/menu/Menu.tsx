@@ -2,17 +2,17 @@ import React, { FC, useState } from "react";
 import { Link } from "react-router-dom";
 import { useAppSelector } from "../../store/hooks/redux";
 import { generateAvatar } from "../utils/avatarGenerate";
-import search from "../../icons/search.png";
-import searchGreen from "../../icons/searchGreen.png";
-import lenta from "../../icons/lenta.png";
-import lentaGreen from "../../icons/lentaGreen.png";
-import notification from "../../icons/notification.png";
-import notificationGreen from "../../icons/notificationGreen.png";
-import blog from "../../icons/blog.png";
-import blogGreen from "../../icons/blogGreen.png";
-import profile from "../../icons/profile.png";
-import profileGreen from "../../icons/profileGreen.png";
 import "./Menu.css";
+const search = require("../../icons/search.png");
+const searchGreen = require("../../icons/searchGreen.png");
+const lenta = require("../../icons/lenta.png");
+const lentaGreen = require("../../icons/lentaGreen.png");
+const notification = require("../../icons/notification.png");
+const notificationGreen = require("../../icons/notificationGreen.png");
+const blog = require("../../icons/blog.png");
+const blogGreen = require("../../icons/blogGreen.png");
+const profile = require("../../icons/profile.png");
+const profileGreen = require("../../icons/profileGreen.png");
 
 const Menu: FC = () => {
   const { user } = useAppSelector((state) => state.userReducer);

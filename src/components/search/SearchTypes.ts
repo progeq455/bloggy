@@ -1,24 +1,19 @@
-export interface ISearchResultUser {
+export interface IUserItem {
   user_id: number;
   user_avatar: number;
   user_login: string;
 }
 
-export interface ISearchResultBlog {
+export interface IBlogItem {
   blog_id: number;
   blog_avatar: string;
   blog_caption: string;
 }
 
-export interface ISearchResultArticle {
+export interface IArticleItem {
   blog_id: number;
   blog_avatar: string;
   article_id: number;
   article_caption: string;
   blog_caption: string;
-}
-
-export interface IFiltersToSearch {
-  filter: string;
-  query: string;
 }

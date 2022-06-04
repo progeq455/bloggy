@@ -3,8 +3,7 @@ import { useDebounce } from "../../hooks/useDebounce";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/redux";
 import { searchData } from "../../store/reducers/search/searchActions";
 import { clearResults } from "../../store/reducers/search/searchSlice";
-
-// Доделать вывод и стили
+import SearchItem from "./searchItem/SearchItem";
 
 const Search: FC = () => {
   const dispatch = useAppDispatch();
@@ -54,10 +53,17 @@ const Search: FC = () => {
       ) : (
         ""
       )}
-      {isLoading && <p className="search-loading">Загрузка...</p>}
-      {results && results.map(item => <div>
-        items
-      </div>)}
+      <ul className="search-results">
+        {isLoading === false ? (
+          results && results.length !== 0 ? (
+            results.map((item) => <SearchItem />)
+          ) : (
+            <p className="search-results__none">Результатов нет</p>
+          )
+        ) : (
+          <p className="search-resutls__loading">Загрузка...</p>
+        )}
+      </ul>
     </section>
   );
 };
