@@ -8,7 +8,7 @@
 
 ## Технологии на Front-end
 
- - *HTML5, CSS3, SCSS, JavaScript, React, Redux-Toolkit, RTK-query, TypeScript, Jest, React-Testing-Library, Cypress*
+ - *HTML5, CSS3, SCSS, JavaScript, React, Redux-Toolkit, RTK-query, TypeScript, Jest, React-Testing-Library*
 
 ## Технологии на Back-end
 
