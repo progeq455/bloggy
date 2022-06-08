@@ -1,14 +1,25 @@
 import React, { FC } from "react";
-import { IArticleItem, IBlogItem, IUserItem } from "../SearchTypes";
 
-const SearchItem: FC<IUserItem | IBlogItem | IArticleItem> = (item) => {
-    console.log(item);
+interface IItemProps {
+    type: string;
+}
+
+const SearchItem: FC<IItemProps> = ({ type }) => {
+    if (type === "blogs") {
+        return (
+            <div>blog</div>
+        )
+    } else if (type === "article") {
+        return (
+            <div>article</div>
+        )
+    }
 
     return (
         <div>
-            <p>something...</p>
+            user
         </div>
-    );
+    )
 }
 
 export default SearchItem;

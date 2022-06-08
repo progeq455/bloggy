@@ -56,7 +56,7 @@ const Search: FC = () => {
       <ul className="search-results">
         {isLoading === false ? (
           results && results.length !== 0 ? (
-            results.map((item) => <SearchItem />)
+            results.map((item) => <SearchItem type={searchFilter} />)
           ) : (
             <p className="search-results__none">Результатов нет</p>
           )
