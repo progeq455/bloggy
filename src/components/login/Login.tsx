@@ -21,7 +21,7 @@ const Login: FC = () => {
   };
 
   return (
-    <section className="login">
+    <section className="login" data-testid="login-page">
       <Link to="/" style={{ textDecoration: "none" }}>
         <p className="login-title">Bloggy</p>
       </Link>
