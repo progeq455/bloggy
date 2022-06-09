@@ -18,6 +18,6 @@ export interface IUserToLogin {
 }
 
 export interface IUserVerify {
-  jwtToken: "string";
-  userParsed: IUser
+  jwtToken: string;
+  userParsed: IUser;
 }

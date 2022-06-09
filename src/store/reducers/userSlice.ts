@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { authUser, loginUser, registerUser } from "./userActions";
 import { IUser } from "../types/User";
 
-interface AuthState {
+export interface AuthState {
     user: IUser | {};
     auth: boolean;
     isLoading: boolean;
@@ -28,7 +28,7 @@ export const userSlice = createSlice({
         clearErrorLogin: (state) => {
             state.errorLogin = "";
         }
-    },
+    }, 
     extraReducers: {
         [authUser.fulfilled.type]: (state, action: PayloadAction<IUser>) => {
             state.user = action.payload;

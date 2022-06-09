@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import {setupStore} from "./store/store";
 import App from "./App";
 
-export const store = setupStore();
+const store = setupStore();
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
