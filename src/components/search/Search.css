@@ -1,1 +1,103 @@
-/* No CSS *//*# sourceMappingURL=Search.css.map */
+.search {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  border-right: 1px solid #e5e5e5;
+  padding-top: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.search-title {
+  margin-top: 25px;
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+}
+
+.search-input {
+  margin-top: 15px;
+  width: 400px;
+  border: 2px solid #e5e5e5;
+  border-radius: 15px;
+  background: transparent;
+  outline: none;
+  text-overflow: ellipsis;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000000;
+}
+
+.search-input::-webkit-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #a3a3a3;
+}
+
+.search-input:-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #a3a3a3;
+}
+
+.search-input::-ms-input-placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #a3a3a3;
+}
+
+.search-input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #a3a3a3;
+}
+
+.search-input:hover {
+  border: 2px solid #c4c4c4;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.search-input:not(:hover) {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.search-results {
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-results__loading {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+}
+
+.search-result {
+  text-decoration: none;
+}
+
+.search-result__element {
+  background: #fcfcfc;
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.search-result__element-name {
+  font-family: Roboto Flex, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #000000;
+}
+/*# sourceMappingURL=Search.css.map */

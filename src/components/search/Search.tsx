@@ -1,9 +1,10 @@
-import React, { FC, useState, useEffect } from "react";
+import React, { FC, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useDebounce } from "../../hooks/useDebounce";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/redux";
 import { searchData } from "../../store/reducers/search/searchActions";
 import { clearResults } from "../../store/reducers/search/searchSlice";
-import SearchItem from "./searchItem/SearchItem";
+import "./Search.css";
 
 const Search: FC = () => {
   const dispatch = useAppDispatch();
@@ -11,14 +12,13 @@ const Search: FC = () => {
   const { results, isLoading } = useAppSelector((state) => state.searchReducer);
 
   const [debouncedValue, value, setValue] = useDebounce<string>("", 1000);
-  const [searchFilter, setSearchFilter] = useState<string>("users");
 
   const search = () => {
-    dispatch(searchData({ filter: searchFilter, query: debouncedValue }));
+    dispatch(searchData(debouncedValue));
   };
 
   useEffect(() => {
-    if (debouncedValue !== "" && searchFilter !== "") {
+    if (debouncedValue !== "") {
       search();
     } else if (debouncedValue === "") {
       clearFilter();
@@ -27,38 +27,32 @@ const Search: FC = () => {
 
   const clearFilter = () => {
     setValue("");
-    setSearchFilter("users");
     dispatch(clearResults());
   };
 
   return (
     <section className="search">
-      <p className="search-title">Поиск</p>
+      <p className="search-title">Поиск пользователей</p>
       <input
         type="text"
-        placeholder="search"
+        placeholder="Введите текст"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         className="search-input"
       />
-      <select onChange={(e) => setSearchFilter(e.target.value)} className="search-filter">
-        <option value="users" selected className="search-filter__option">
-          пользователям
-        </option>
-        <option value="blogs" className="search-filter__option">блогам</option>
-        <option value="articles" className="search-filter__option">статьям</option>
-      </select>
-      {debouncedValue && searchFilter ? (
-        <button onClick={() => clearFilter()} className="search-clear">Очистить</button>
-      ) : (
-        ""
-      )}
       <ul className="search-results">
         {isLoading === false ? (
           results && results.length !== 0 ? (
-            results.map((item) => <SearchItem type={searchFilter} />)
+            results.map(item => (
+              <Link to={`/users/${item.user_id}`} key={item.user_id} className="search-result">
+                <div className="search-result__element">
+                  <div className="search-result__element-avatar">{item.user_login[0]}</div>
+                  <p className="search-result__element-name">{item.user_login}</p>
+                </div>
+              </Link>
+            ))
           ) : (
-            <p className="search-results__none">Результатов нет</p>
+            ""
           )
         ) : (
           <p className="search-resutls__loading">Загрузка...</p>

@@ -1,1 +1,53 @@
- 
+@import "../../base";
+
+.search {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  border-right: 1px solid #e5e5e5;
+  padding-top: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  &-title {
+    margin-top: 25px;
+    @include font-style($font-weight-medium, $font-size-4, $color-black);
+  }
+
+  &-input {
+    margin-top: 15px;
+    @include input-style(
+      $width-input-2,
+      $border-style-1,
+      $border-radius-1,
+      $border-style-2
+    );
+    @include font-style($font-weight-medium, $font-size-5, $color-black);
+  }
+
+  &-results {
+    list-style-type: none;
+    padding: 0;
+
+    &__loading {
+      @include font-style($font-weight-regular, $font-size-5, $color-black);
+    }
+  }
+
+  &-result {
+    text-decoration: none;
+
+    &__element {
+      background: $color-white-light;
+      border-radius: $border-radius-3;
+      padding: 15px;
+
+      &-avatar {
+      }
+
+      &-name {
+        @include font-style($font-weight-medium, $font-size-6, $color-black);
+      }
+    }
+  }
+}

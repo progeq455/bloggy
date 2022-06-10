@@ -1,22 +1,14 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { searchData } from "./searchActions";
-import {
-  ISearchResultUser,
-  ISearchResultBlog,
-  ISearchResultArticle,
-} from "../../types/Search";
+import { ISearchResultUser } from "../../types/Search";
 
-interface SearchState {
-  results:
-    | ISearchResultUser[]
-    | ISearchResultBlog[]
-    | ISearchResultArticle[]
-    | [];
+export interface ISearchState {
+  results: ISearchResultUser[] | [];
   isLoading: boolean;
   error: string;
 }
 
-const initialState: SearchState = {
+const initialState: ISearchState = {
   results: [],
   isLoading: false,
   error: "",
@@ -33,9 +25,7 @@ export const searchSlice = createSlice({
   extraReducers: {
     [searchData.fulfilled.type]: (
       state,
-      action: PayloadAction<
-        ISearchResultUser[] | ISearchResultBlog[] | ISearchResultArticle[] | []
-      >
+      action: PayloadAction<ISearchResultUser[] | []>
     ) => {
       state.results = action.payload;
       state.isLoading = false;
