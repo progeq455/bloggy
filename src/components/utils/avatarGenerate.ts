@@ -7,19 +7,19 @@ export const generateAvatar = (avatar: number) => {
       break;
 
     case 1:
-      colorValue = "#66B2FF;";
+      colorValue = "#66B2FF";
       break;
 
     case 2:
-      colorValue = "#FFB266;";
+      colorValue = "#FFB266";
       break;
 
     case 3:
-      colorValue = "#FF66B2;";
+      colorValue = "#FF66B2";
       break;
 
     case 4:
-      colorValue = "#FFFF66;";
+      colorValue = "#FFFF66";
       break;
   }
 

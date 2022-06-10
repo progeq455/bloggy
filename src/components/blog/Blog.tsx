@@ -61,7 +61,6 @@ const Blog: FC = () => {
                 </header>
             ) : <p className="blog-loading">Загрузка...</p>
             }
-            <p className="blog-data">Материалы из этого блога</p>
             <ul className="blog-list">
                 {result?.articlesOfBlog && result.articlesOfBlog.map(article => (
                     <ArticleItem article={article} />

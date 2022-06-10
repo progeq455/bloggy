@@ -4,6 +4,7 @@ import { useDebounce } from "../../hooks/useDebounce";
 import { useAppDispatch, useAppSelector } from "../../store/hooks/redux";
 import { searchData } from "../../store/reducers/search/searchActions";
 import { clearResults } from "../../store/reducers/search/searchSlice";
+import { generateAvatar } from "../utils/avatarGenerate";
 import "./Search.css";
 
 const Search: FC = () => {
@@ -46,7 +47,9 @@ const Search: FC = () => {
             results.map(item => (
               <Link to={`/users/${item.user_id}`} key={item.user_id} className="search-result">
                 <div className="search-result__element">
-                  <div className="search-result__element-avatar">{item.user_login[0]}</div>
+                  <div className="search-result__element-avatar" style={{
+                    background: generateAvatar(item.user_avatar),
+                  }}>{item.user_login[0].toUpperCase()}</div>
                   <p className="search-result__element-name">{item.user_login}</p>
                 </div>
               </Link>
@@ -55,7 +58,7 @@ const Search: FC = () => {
             ""
           )
         ) : (
-          <p className="search-resutls__loading">Загрузка...</p>
+          <p className="search-results__loading">Загрузка...</p>
         )}
       </ul>
     </section>

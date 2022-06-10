@@ -178,24 +178,15 @@
   color: #000000;
 }
 
-.blog-data {
-  font-family: Roboto Flex, sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  color: #000000;
-  margin-left: 25px;
-}
-
 .blog-list {
   overflow: scroll;
-  height: 40vh;
+  height: 50vh;
   list-style-type: none;
   padding: 0;
   padding-left: 25px;
   padding-right: 25px;
-  padding-top: 15px;
-  padding-bottom: 17vh;
+  padding-top: 0;
+  padding-bottom: 15vh;
   margin-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;

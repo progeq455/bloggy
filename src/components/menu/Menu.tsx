@@ -19,15 +19,15 @@ const Menu: FC = () => {
 
   let login: string = "";
   let email: string = "";
-  let avatar: number;
-  let currentAvatar: string = "";
+  let avatar: number = 0;
 
-  if ("login" in user && "email" in user && "avatar" in user) {
+  if ("avatar" in user) {
+    avatar = user.avatar;
+  }
+
+  if ("login" in user && "email" in user) {
     login = user.login;
     email = user.email;
-    avatar = user.avatar;
-
-    currentAvatar = generateAvatar(avatar);
   }
 
   const [currentLink, setCurrentLink] = useState<number>();
@@ -38,7 +38,7 @@ const Menu: FC = () => {
         <header className="menu-user">
           <div
             style={{
-              background: `${currentAvatar}`,
+              background: generateAvatar(avatar),
             }}
             className="menu-user__avatar"
           >
