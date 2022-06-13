@@ -1,26 +1,23 @@
-import { render } from "@testing-library/react";
 import { Provider } from "react-redux";
-import { MemoryRouter } from "react-router-dom";
-import { setupStore } from "../store/store";
-import AuthedRoutes from "../routes/AuthedRoutes";
-import UnAuthedRoutes from "../routes/unAuthRoutes";
+import { MemoryRouter, Routes } from "react-router-dom";
+import { render } from "@testing-library/react";
 
 interface IOptions {
-  authRoutes: boolean,
-  initialRoute: string;
+    route: string;
+    routes: any;
 }
 
-export const renderTestApp = (component: any, options: IOptions) => {
-  const store = setupStore();
+export const renderTestApp = (options: IOptions, store: any) => {
 
-  return (
-    render(
-      <Provider store={store}>
-        <MemoryRouter initialEntries={[options?.initialRoute]}>
-          {options?.authRoutes === true ? <AuthedRoutes /> : <UnAuthedRoutes />}
-          {component}
-        </MemoryRouter>
-      </Provider>
-    )
-  );
+    return (
+        render(
+            <Provider store={store}>
+                <MemoryRouter initialEntries={[options?.route]}>
+                    <Routes>
+                        {options?.routes}
+                    </Routes>
+                </MemoryRouter>
+            </Provider>
+        )
+    );
 }; 

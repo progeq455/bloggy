@@ -41,12 +41,12 @@ const Search: FC = () => {
         onChange={(e) => setValue(e.target.value)}
         className="search-input"
       />
-      <ul className="search-results">
+      <ul className="search-results" data-testid="s-results">
         {isLoading === false ? (
           results && results.length !== 0 ? (
             results.map(item => (
               <Link to={`/users/${item.user_id}`} key={item.user_id} className="search-result">
-                <div className="search-result__element">
+                <div className="search-result__element" data-testid="s-result-elem">
                   <div className="search-result__element-avatar" style={{
                     background: generateAvatar(item.user_avatar),
                   }}>{item.user_login[0].toUpperCase()}</div>

@@ -6,7 +6,7 @@ describe("User Actions", () => {
   beforeAll(() => {
     mockNetWorkResponse();
   });
-
+  
   test("Auth", async () => {
     const store = setupStore();
     const result = await store.dispatch(authUser());
