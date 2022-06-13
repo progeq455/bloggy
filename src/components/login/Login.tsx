@@ -28,7 +28,7 @@ const Login: FC = () => {
       <p className="login-description">Авторизуйтесь, чтобы продолжить</p>
       {isLoading === false ? (
         <span>
-          <div className="login-form">
+          <div className="login-form" data-testid="l-form">
             <input
               type="text"
               placeholder="Email"
@@ -49,6 +49,7 @@ const Login: FC = () => {
             <button
               className="login-send__start"
               onClick={() => loginIn(email, password)}
+              data-testid="l-button"
             >
               Начать
             </button>

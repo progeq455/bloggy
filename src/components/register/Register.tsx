@@ -24,7 +24,7 @@ const Register: FC = () => {
   };
 
   return (
-    <section className="register">
+    <section className="register" data-testid="register-page">
       <Link to="/" style={{ textDecoration: "none" }}>
         <p className="register-title">Bloggy</p>
       </Link>
@@ -33,7 +33,7 @@ const Register: FC = () => {
       </p>
       {isLoading === false ? (
         <span>
-          <div className="register-form">
+          <div className="register-form" data-testid="r-form">
             <input
               type="text"
               placeholder="Задайте логин"
@@ -61,6 +61,7 @@ const Register: FC = () => {
             <button
               className="register-send__start"
               onClick={() => register(login, email, password)}
+              data-testid="r-button"
             >
               Начать
             </button>
