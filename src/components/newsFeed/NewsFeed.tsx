@@ -8,15 +8,16 @@ import "./NewsFeed.css";
 const NewsFeed: FC = () => {
   const { data: blogs, isFetching } =
     feedAPI.useFetchBlogsSubscribesShortlyQuery(localStorage.token);
+
   const { data: articles, isLoading } =
     feedAPI.useFetchArticlesBlogsSubscribesQuery(localStorage.token);
 
   return (
-    <section className="feed">
+    <section className="feed" data-testid="newsfeed-page">
       <div className="feed-header">
         <p className="feed-header__caption">Лента</p>
       </div>
-      <div className="feed-subscontainer">
+      <div className="feed-subscontainer" data-testid="f-subs">
         <ul className="feed-subscribes">
           {isFetching === false ? (
             blogs && blogs.length !== 0 ? (
@@ -25,7 +26,7 @@ const NewsFeed: FC = () => {
                   to={`/blogs/${blog.blog_id}`}
                   style={{ textDecoration: "none" }}
                 >
-                  <li className="feed-subscribes__blog" key={blog.blog_id}>
+                  <li className="feed-subscribes__blog" key={blog.blog_id} data-testid="f-blog">
                     {blog.blog_avatar ? (
                       <img
                         src={`${AVATAR_BLOG_STATIC_URL + blog.blog_avatar}`}
@@ -51,7 +52,7 @@ const NewsFeed: FC = () => {
           <button className="feed-subschange">Подписки</button>
         </Link>
       </div>
-      <section className="feed-artccontainer">
+      <section className="feed-artccontainer" data-testid="f-articles">
         <ul className="feed-articles">
           {isLoading === false ? (
             articles && articles.length !== 0 ? (
